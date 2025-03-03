@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export default function Posts() {
     const [posts, setPosts] = useState([]);
@@ -22,7 +23,7 @@ export default function Posts() {
                                 <div className="card-body">
                                     <h5 className="card-title">{p.title}</h5>
                                     <p className="card-text">{p.content}</p>
-                                    <a href="#" className="btn btn-primary align-self-end">Apri Post</a>
+                                    <Link to={`/posts/${p.id}`} className="btn btn-primary align-self-end">Apri Post</Link>
                                 </div>
                             </div>
                         )
